@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>BalochGames Hub - Ultimate Gaming Information Center</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ec6090;
+            --secondary-color: #2a2a2a;
+            --light-color: #fff;
+            --dark-color: #1f1f1f;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .header-area {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgb(252, 252, 252);
+        }
+        
+        .main-nav .nav li a {
+            color: var(--light-color);
+            padding: 10px 15px;
+            transition: all 0.3s;
+        }
+        
+        .main-nav .nav li a:hover,
+        .main-nav .nav li a.active {
+            color: var(--primary-color);
+        }
+        
+        .main-banner {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            color: white;
+        }
+        
+        .page-content {
+            padding: 100px 0;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .game-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .game-card .card-body {
+            padding: 20px;
+        }
+        
+        .game-rating {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        Tab 
+        .tab-content {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--secondary-color);
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+         Preloader
+
+        .js-preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--secondary-color);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dots span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: bounce 1s infinite ease-in-out;
+        }
+        
+        .dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#home">
+                            <h2 style="color: rgb(255, 255, 255); margin: 0;"> BalochGames <span style="color: #279cf0;">Hub</span></h2>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon" style="color: white;">Menu</span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#games">Game Library</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#game-info">Featured Game</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="main-banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="caption header-text">
+                            <h6>Welcome to BalochGames Hub</h6>
+                            <h1>YOUR ULTIMATE GAMING RESOURCE</h1>
+                            <p>GameVerse Hub is your premier destination for comprehensive game information, Founded By Ababager Barkat Baloch this shows reviews, news, and community insights. Discover everything about your favorite games in one place.</p>
+                            <div class="search-input mt-4">
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search for games..." aria-label="Search">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <div class="right-image position-relative">
+                            <img src="https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000000023/SQ_NSwitch_TheLegendOfZeldaBreathOfTheWild_E" class="img-fluid rounded" alt="Featured Game">
+                            <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">Game of the Month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Game Reviews</h5>
+                                <p class="card-text">In-depth reviews from our expert team</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-newspaper fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Latest News</h5>
+                                <p class="card-text">Stay updated with gaming industry news</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-book fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Guides & Walkthroughs</h5>
+                                <p class="card-text">Complete guides for your favorite games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Community</h5>
+                                <p class="card-text">Join our growing gaming community</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Game Library Section -->
+        <section id="games" class="page-content py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-heading">Game Library</h2>
+                        <p>Browse our extensive collection of game information</p>
+                    </div>
+                    <div class="col-lg-6 text-end">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary active" data-filter="*">All Games</button>
+                            <button type="button" class="btn btn-outline-primary" data-filter=".action">Action</button>
+                            <button type="button" class="btn btn-outline-primary" data-filter=".adventure">Adventure</button>
+                            <button type="button" class="btn btn-outline-primary" data-filter=".rpg">RPG</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Game Card 1 -->
+                    <div class="col-lg-3 col-md-6 mb-4 game-card action">
+                        <div class="card h-100">
+                            <img src="https://www.venturegames.com.pk/cdn/shop/files/Assassin_sCreedValhalla.jpg?v=1704447346" class="card-img-top" alt="Assassin's Creed">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Action</span>
+                                <h5 class="card-title">Assassin's Creed Valhalla</h5>
+                                <p class="card-text">Become a legendary Viking warrior in this open-world RPG.</p>
+                                <div class="game-rating mb-3">Rating: 9.2/10</div>
+                                <a href="#acv-info" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 <!-- Game Card 2 -->
+                    <div class="col-lg-3 col-md-6 mb-4 game-card adventure">
+                        <div class="card h-100">
+                            <img src="https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000000023/SQ_NSwitch_TheLegendOfZeldaBreathOfTheWild_E" class="card-img-top" alt="The Legend of Zelda">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">Adventure</span>
+                                <h5 class="card-title">The Legend of Zelda: Tears of the Kingdom</h5>
+                                <p class="card-text">Explore the vast lands of Hyrule in this epic adventure.</p>
+                                <div class="game-rating mb-3">Rating: 9.5/10</div>
+                                <a href="#zelda-info" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  <!-- Game Card 3 -->
+                    <div class="col-lg-3 col-md-6 mb-4 game-card rpg">
+                        <div class="card h-100">
+                            <img src="https://kamikey.com/wp-content/uploads/2024/12/elden-ring-steam.jpg" class="card-img-top" alt="Elden Ring">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">RPG</span>
+                                <h5 class="card-title">Elden Ring</h5>
+                                <p class="card-text">A new fantasy action RPG from FromSoftware.</p>
+                                <div class="game-rating mb-3">Rating: 9.7/10</div>
+                                <a href="#elden-info" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 <!-- Game Card 4 -->
+                    <div class="col-lg-3 col-md-6 mb-4 game-card action">
+                        <div class="card h-100">
+                            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1962660/capsule_616x353.jpg?t=1710969334" class="card-img-top" alt="Call of Duty">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Action</span>
+                                <h5 class="card-title">Call of Duty: Modern Warfare II</h5>
+                                <p class="card-text">The sequel to 2019's blockbuster Modern Warfare.</p>
+                                <div class="game-rating mb-3">Rating: 8.9/10</div>
+                                <a href="#game-info" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-primary">View All Games</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Game Info Section -->
+        <section id="COD-info" class="page-content py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-heading">Call of Duty®: Modern Warfare® II</h2>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_XrrJ90UXooKqAqwGqH7ShPgeeZ6ypJcOxDcd1G0Xit9Gjwx24w&s=10&ec=72940544" class="img-fluid rounded" alt="Call of Duty®: Modern Warfare® II">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <span class="badge bg-success">First-person Shooter</span>
+                            </div>
+                            <div>
+                                <strong>Metacritic Score:</strong> <span class="text-primary">91/100</span>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">Modern Warfare II is the sequel to 2019's blockbuster Modern Warfare. The game features a gripping single-player campaign, immersive multiplayer modes, and the new Special Ops missions.</p>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><strong>Release Date:</strong> October 28, 2022</li>
+                            <li class="mb-2"><strong>Developer:</strong> Infinity Ward</li>
+                            <li class="mb-2"><strong>Publisher:</strong> Activision</li>
+                            <li class="mb-2"><strong>Platforms:</strong> PC, PlayStation, Xbox</li>
+                        </ul>
+                        
+                        <div class="mb-4">
+                            <h5>Game Features:</h5>
+                            <ul>
+                                <li>Continues the gripping narrative from Modern Warfare (2019)</li>
+                                <li>All-new gameplay features and advancements</li>
+                                <li>New tactical gameplay mechanics</li>
+                                <li>Cutting-edge graphics and audio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="CODTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="COD-desc-tab" data-bs-toggle="tab" data-bs-target="#COD-desc" type="button" role="tab">Description</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="COD-reviews-tab" data-bs-toggle="tab" data-bs-target="#COD-reviews" type="button" role="tab">Reviews</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="COD-guides-tab" data-bs-toggle="tab" data-bs-target="#COD-guides" type="button" role="tab">Guides</button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content p-3 bg-light" id="CODTabsContent">
+                            <div class="tab-pane fade show active" id="COD-desc" role="tabpanel">
+                                <h4>About the Game</h4>
+                                <p>Call of Duty: Modern Warfare II is a first-person shooter game developed by Infinity Ward and published by Activision. It is the nineteenth game in the Call of Duty series and the sequel to 2019's Modern Warfare.
+                                     The game features a single-player campaign that continues the story of Task Force 141 as they face off against a new threat. The multiplayer mode builds upon the systems from the 2019 reboot, introducing new maps, modes, and gameplay mechanics.</p>
+                                <p>Modern Warfare II also introduces a new cooperative Special Ops mode that continues the narrative from the campaign with missions designed for two players.</p>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="COD-reviews" role="tabpanel">
+                                <div class="mb-4">
+                                    <h4>Critic Reviews</h4>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h5 class="card-title mb-0">IGN</h5>
+                                                <span class="text-primary">10/10</span>
+                                            </div>
+                                            <p class="card-text">"Modern Warfare II's multiplayer is a blast, with great new maps and modes that make it one of the best Call of Duty games in years."</p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h5 class="card-title mb-0">GameSpot</h5>
+                                                <span class="text-primary">10/10</span>
+                                            </div>
+                                            <p class="card-text">"The campaign is thrilling and the multiplayer is as addictive as ever, though some design choices hold it back from greatness."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="COD-guides" role="tabpanel">
+                                <h4>Game Guides</h4>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Guide</h5>
+                                            <small>Updated 1 week ago</small>
+                                        </div>
+                                        <p class="mb-1"></p>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">The Campaign</h5>
+                                            <small>Updated 3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">The campaign is thrilling and the multiplayer is as addictive as ever, though some design choices hold it back from greatness.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       <!-- Zelda: Tears of the Kingdom Section -->
+<section id="zelda-info" class="page-content py-5 bg-white">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="section-heading">The Legend of Zelda: Tears of the Kingdom</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000000023/SQ_NSwitch_TheLegendOfZeldaBreathOfTheWild_E" class="img-fluid rounded" alt="Zelda: Tears of the Kingdom">
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <span class="badge bg-success">Adventure</span>
+                    </div>
+                    <div>
+                        <strong>Metacritic Score:</strong> <span class="text-primary">96/100</span>
+                    </div>
+                </div>
+                
+                <p class="mb-4">The Legend of Zelda: Tears of the Kingdom is the sequel to the critically acclaimed Breath of the Wild. This installment takes the open-world adventure to new heights with expanded exploration mechanics and deeper storytelling.</p>
+                
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><strong>Release Date:</strong> May 12, 2023</li>
+                    <li class="mb-2"><strong>Developer:</strong> Nintendo EPD</li>
+                    <li class="mb-2"><strong>Publisher:</strong> Nintendo</li>
+                    <li class="mb-2"><strong>Platforms:</strong> Nintendo Switch</li>
+                </ul>
+                
+                <div class="mb-4">
+                    <h5>Game Features:</h5>
+                    <ul>
+                        <li>Expanded open world with sky islands and underground areas</li>
+                        <li>New Ultrahand and Fuse abilities for creative problem-solving</li>
+                        <li>Deeper story exploring Hyrule's ancient past</li>
+                        <li>Enhanced physics and chemistry systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="zeldaTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="zelda-desc-tab" data-bs-toggle="tab" data-bs-target="#zelda-desc" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="zelda-reviews-tab" data-bs-toggle="tab" data-bs-target="#zelda-reviews" type="button" role="tab">Reviews</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="zelda-guides-tab" data-bs-toggle="tab" data-bs-target="#zelda-guides" type="button" role="tab">Guides</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content p-3 bg-light" id="zeldaTabsContent">
+                    <div class="tab-pane fade show active" id="zelda-desc" role="tabpanel">
+                        <h4>About the Game</h4>
+                        <p>In Tears of the Kingdom, Link explores both the skies above Hyrule and a massive subterranean world below it. The game builds upon the physics-based gameplay of Breath of the Wild while introducing new mechanics that allow for unprecedented creativity in solving puzzles and overcoming obstacles.</p>
+                        <p>The story follows Link as he investigates a mysterious gloom spreading across Hyrule, uncovering secrets about the ancient Zonai civilization and the origins of the Master Sword.</p>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="zelda-reviews" role="tabpanel">
+                        <div class="mb-4">
+                            <h4>Critic Reviews</h4>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">IGN</h5>
+                                        <span class="text-primary">10/10</span>
+                                    </div>
+                                    <p class="card-text">"Tears of the Kingdom is an unfathomable follow-up to one of the greatest games ever made, somehow improving upon it in nearly every way."</p>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">GameSpot</h5>
+                                        <span class="text-primary">10/10</span>
+                                    </div>
+                                    <p class="card-text">"A triumphant sequel that builds on Breath of the Wild's foundation to create something even more memorable."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="zelda-guides" role="tabpanel">
+                        <h4>Game Guides</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Beginner's Guide</h5>
+                                    <small>Updated 1 week ago</small>
+                                </div>
+                                <p class="mb-1">Essential tips for new players</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Shrine Solutions</h5>
+                                    <small>Updated 3 days ago</small>
+                                </div>
+                                <p class="mb-1">Complete walkthrough for all shrines</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Elden Ring Section -->
+<section id="elden-info" class="page-content py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="section-heading">Elden Ring</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="https://kamikey.com/wp-content/uploads/2024/12/elden-ring-steam.jpg" class="img-fluid rounded" alt="Elden Ring">
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <span class="badge bg-warning">Action RPG</span>
+                    </div>
+                    <div>
+                        <strong>Metacritic Score:</strong> <span class="text-primary">94/100</span>
+                    </div>
+                </div>
+                
+                <p class="mb-4">Elden Ring is a fantasy action-RPG adventure set in a world co-created by Hidetaka Miyazaki (Dark Souls series) and George R.R. Martin (A Song of Ice and Fire). Explore the Lands Between and become the Elden Lord.</p>
+                
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><strong>Release Date:</strong> February 25, 2022</li>
+                    <li class="mb-2"><strong>Developer:</strong> FromSoftware</li>
+                    <li class="mb-2"><strong>Publisher:</strong> Bandai Namco</li>
+                    <li class="mb-2"><strong>Platforms:</strong> PC, PlayStation, Xbox</li>
+                </ul>
+                
+                <div class="mb-4">
+                    <h5>Game Features:</h5>
+                    <ul>
+                        <li>Vast open world with dynamic weather and day-night cycle</li>
+                        <li>Deep character customization with numerous weapons and spells</li>
+                        <li>Challenging combat with strategic options</li>
+                        <li>Rich lore and environmental storytelling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="eldenTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="elden-desc-tab" data-bs-toggle="tab" data-bs-target="#elden-desc" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="elden-reviews-tab" data-bs-toggle="tab" data-bs-target="#elden-reviews" type="button" role="tab">Reviews</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="elden-guides-tab" data-bs-toggle="tab" data-bs-target="#elden-guides" type="button" role="tab">Guides</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content p-3 bg-white" id="eldenTabsContent">
+                    <div class="tab-pane fade show active" id="elden-desc" role="tabpanel">
+                        <h4>About the Game</h4>
+                        <p>Elden Ring combines FromSoftware's signature gameplay with an expansive open world. Players create their own character and set out to explore the Lands Between to repair the Elden Ring and become the new Elden Lord.</p>
+                        <p>The game features challenging combat, intricate level design, and a mysterious narrative that unfolds through exploration and discovery rather than traditional storytelling.</p>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="elden-reviews" role="tabpanel">
+                        <div class="mb-4">
+                            <h4>Critic Reviews</h4>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">IGN</h5>
+                                        <span class="text-primary">10/10</span>
+                                    </div>
+                                    <p class="card-text">"Elden Ring is a massive iteration on what FromSoftware began with the Souls series, bringing its relentlessly challenging combat to an incredible open world."</p>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">PC Gamer</h5>
+                                        <span class="text-primary">90/100</span>
+                                    </div>
+                                    <p class="card-text">"FromSoftware's most ambitious game yet delivers an incredible open world full of mystery and danger."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="elden-guides" role="tabpanel">
+                        <h4>Game Guides</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Beginner's Survival Guide</h5>
+                                    <small>Updated 2 weeks ago</small>
+                                </div>
+                                <p class="mb-1">Essential tips for new players</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Best Builds</h5>
+                                    <small>Updated 5 days ago</small>
+                                </div>
+                                <p class="mb-1">Top character builds for different playstyles</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Assassin's Creed Valhalla Section -->
+<section id="acv-info" class="page-content py-5 bg-white">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="section-heading">Assassin's Creed Valhalla</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="https://www.venturegames.com.pk/cdn/shop/files/Assassin_sCreedValhalla.jpg?v=1704447346" class="img-fluid rounded" alt="Assassin's Creed Valhalla">
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <span class="badge bg-primary">Action RPG</span>
+                    </div>
+                    <div>
+                        <strong>Metacritic Score:</strong> <span class="text-primary">84/100</span>
+                    </div>
+                </div>
+                
+                <p class="mb-4">Assassin's Creed Valhalla is an action role-playing video game set in 873 AD during the Viking invasion of Britain. Players control Eivor, a Viking raider who becomes embroiled in the conflict between the Brotherhood of Assassins and the Templar Order.</p>
+                
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><strong>Release Date:</strong> November 10, 2020</li>
+                    <li class="mb-2"><strong>Developer:</strong> Ubisoft Montreal</li>
+                    <li class="mb-2"><strong>Publisher:</strong> Ubisoft</li>
+                    <li class="mb-2"><strong>Platforms:</strong> PC, PlayStation, Xbox, Stadia</li>
+                </ul>
+                
+                <div class="mb-4">
+                    <h5>Game Features:</h5>
+                    <ul>
+                        <li>Massive open world set in Dark Ages England and Norway</li>
+                        <li>Dual-wielding combat system with a variety of weapons</li>
+                        <li>Settlement building and management</li>
+                        <li>Choices that affect the story and world</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="acvTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="acv-desc-tab" data-bs-toggle="tab" data-bs-target="#acv-desc" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="acv-reviews-tab" data-bs-toggle="tab" data-bs-target="#acv-reviews" type="button" role="tab">Reviews</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="acv-guides-tab" data-bs-toggle="tab" data-bs-target="#acv-guides" type="button" role="tab">Guides</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content p-3 bg-light" id="acvTabsContent">
+                    <div class="tab-pane fade show active" id="acv-desc" role="tabpanel">
+                        <h4>About the Game</h4>
+                        <p>In Assassin's Creed Valhalla, players take on the role of Eivor, a Viking raider leading their clan from Norway to settle in England. The game blends history with mythology as Eivor becomes involved in the ancient conflict between the Assassins and Templars.</p>
+                        <p>Valhalla introduces new mechanics to the series including raids, settlement building, and a revamped combat system that emphasizes brutal Viking warfare while maintaining the stealth elements the series is known for.</p>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="acv-reviews" role="tabpanel">
+                        <div class="mb-4">
+                            <h4>Critic Reviews</h4>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">Game Informer</h5>
+                                        <span class="text-primary">9/10</span>
+                                    </div>
+                                    <p class="card-text">"Valhalla is the best Assassin's Creed game in years, with a compelling world and satisfying combat that makes playing as a Viking incredibly fun."</p>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h5 class="card-title mb-0">Eurogamer</h5>
+                                        <span class="text-primary">Recommended</span>
+                                    </div>
+                                    <p class="card-text">"A vast and beautiful world packed with meaningful content and a surprisingly emotional story at its core."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="acv-guides" role="tabpanel">
+                        <h4>Game Guides</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Beginner's Guide</h5>
+                                    <small>Updated 1 month ago</small>
+                                </div>
+                                <p class="mb-1">Essential tips for new Vikings</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Wealth Locations</h5>
+                                    <small>Updated 2 weeks ago</small>
+                                </div>
+                                <p class="mb-1">Find all the best gear and resources</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- News Section -->
+        <section id="news" class="page-content py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-heading">Latest Gaming News</h2>
+                        <p>Stay updated with the latest happenings in the gaming world</p>
+                    </div>
+                    <div class="col-lg-6 text-end">
+                        <a href="#" class="btn btn-outline-primary">View All News</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- News Item 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://sm.ign.com/ign_pk/cover/e/elden-ring/elden-ring-nightreign_9zgq.jpg" class="card-img-top" alt="News Image">
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">Hot</span>
+                                <h5 class="card-title">New DLC Announced for Popular RPG</h5>
+                                <p class="card-text">The developers have announced a massive expansion coming this fall with new areas and story content.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2 hours ago</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://sm.ign.com/t/ign_pk/gallery/c/call-of-du/call-of-duty-modern-warfare-2-2022-campaign-screenshots_6nkb.600.jpg" class="card-img-top" alt="News Image">
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Update</span>
+                                <h5 class="card-title">Major Patch Released for Competitive Shooter</h5>
+                                <p class="card-text">The latest update brings balance changes, new cosmetics, and quality of life improvements.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">1 day ago</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/22665889/Hardmode_1__1_.jpeg?quality=90&strip=all&crop=7.8125,0,84.375,100" class="card-img-top" alt="News Image">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Rumor</span>
+                                <h5 class="card-title">Next-Gen Console Refresh Coming Soon?</h5>
+                                <p class="card-text">Industry insiders suggest new hardware revisions may be announced in the coming months.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">3 days ago</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-content py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="section-heading mb-4">Contact BalochGames Hub</h2>
+                        <p>Have questions about a game? Want to suggest content? Found an error in our information? Our team is here to help you with any inquiries about games, our content, or partnerships.</p>
+                        
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                <strong>Address:</strong> Muhammad Ali Jinnah University At Shahrah e Faisal
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone me-2 text-primary"></i>
+                                <strong>Phone:</strong> +92 3166786559
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope me-2 text-primary"></i>
+                                <strong>Email:</strong> info@balochgamehub.com
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-headset me-2 text-primary"></i>
+                                <strong>Support:</strong> support@balochgameshub.com
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-4">
+                            <h5>Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#" class="me-3 text-decoration-none"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#" class="me-3 text-decoration-none"><i class="fab fa-facebook fa-2x"></i></a>
+                                <a href="#" class="me-3 text-decoration-none"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="#" class="me-3 text-decoration-none"><i class="fab fa-youtube fa-2x"></i></a>
+                                <a href="#" class="me-3 text-decoration-none"><i class="fab fa-discord fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Send Us a Message</h4>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright © 2025 BalochGames Hub. All rights reserved.</p>
+                    <p> </p>
+                    <p> <strong> Designed And Developed By Ababager Barkat Baloch</strong></p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('js-preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Simple filter functionality for game library
+        document.querySelectorAll('[data-filter]').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelectorAll('[data-filter]').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filter games
+                document.querySelectorAll('.game-card').forEach(card => {
+                    if (filter === '*' || card.classList.contains(filter.substring(1))) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
